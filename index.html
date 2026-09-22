@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Good Land — Unleashing North Africa's Potential</title>
+<meta name="description" content="Good Land supports North African small businesses with the systems, training, and reach they need to grow — and carries their products and voices to the world.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1A4432;
+    --teal: #287284;
+    --gold: #D3A255;
+    --ivory: #FCF9F3;
+    --ivory-dim: #F3EEE3;
+    --forest-ink: #12301F;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--ivory);
+    color: var(--forest-ink);
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, .wordmark {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 600;
+    margin: 0;
+  }
+
+  a { color: inherit; }
+
+  .wrap {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  /* ---------- Nav ---------- */
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.75rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .wordmark {
+    color: var(--forest);
+    font-size: 1.4rem;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--forest-ink);
+    font-size: 0.95rem;
+    margin-left: 2rem;
+    opacity: 0.75;
+    transition: opacity 0.2s ease;
+  }
+
+  nav a:hover { opacity: 1; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    padding: 3rem 2rem 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.2rem, 5vw, 3.4rem);
+    line-height: 1.15;
+    color: var(--forest);
+    max-width: 15ch;
+  }
+
+  .hero p {
+    margin-top: 1.5rem;
+    font-size: 1.15rem;
+    color: var(--forest-ink);
+    max-width: 46ch;
+    opacity: 0.85;
+  }
+
+  .hero-actions {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: transform 0.15s ease, background 0.2s ease;
+  }
+
+  .btn-primary {
+    background: var(--forest);
+    color: var(--ivory);
+  }
+
+  .btn-primary:hover { background: var(--forest-ink); }
+
+  .btn-ghost {
+    border: 1px solid var(--forest);
+    color: var(--forest);
+  }
+
+  .btn-ghost:hover { background: var(--ivory-dim); }
+
+  /* ---------- Horizon illustration ---------- */
+  .horizon {
+    max-width: 1100px;
+    margin: 3rem auto 0;
+    padding: 0 2rem;
+  }
+
+  .horizon svg {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ---------- Vision ---------- */
+  .vision {
+    background: var(--forest);
+    color: var(--ivory);
+    padding: 5rem 2rem;
+    margin-top: -1px;
+  }
+
+  .vision-inner {
+    max-width: 780px;
+    margin: 0 auto;
+  }
+
+  .vision-inner .eyebrow {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    margin-bottom: 1rem;
+  }
+
+  .vision-line {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+    line-height: 1.5;
+    padding: 1.6rem 0;
+    border-top: 1px solid rgba(252, 249, 243, 0.18);
+  }
+
+  .vision-line:last-child { border-bottom: 1px solid rgba(252, 249, 243, 0.18); }
+
+  .vision-line strong {
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  /* ---------- Services ---------- */
+  .services {
+    padding: 5rem 2rem;
+  }
+
+  .services .wrap > h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--forest);
+    max-width: 20ch;
+  }
+
+  .services .wrap > p {
+    margin-top: 1rem;
+    max-width: 55ch;
+    opacity: 0.8;
+  }
+
+  .service-list {
+    margin-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(26, 68, 50, 0.15);
+  }
+
+  .service {
+    padding: 2rem 2rem 2rem 0;
+    border-bottom: 1px solid rgba(26, 68, 50, 0.15);
+  }
+
+  .service:nth-child(odd) { border-right: 1px solid rgba(26, 68, 50, 0.15); padding-right: 2rem; }
+  .service:nth-child(even) { padding-left: 2rem; }
+
+  .service h3 {
+    font-size: 1.2rem;
+    color: var(--teal);
+    margin-bottom: 0.6rem;
+  }
+
+  .service p {
+    margin: 0;
+    font-size: 0.98rem;
+    opacity: 0.85;
+  }
+
+  /* ---------- Contact ---------- */
+  .contact {
+    background: var(--ivory-dim);
+    padding: 5rem 2rem 6rem;
+  }
+
+  .contact .wrap > h2 {
+    font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+    color: var(--forest);
+  }
+
+  .contact .wrap > p {
+    margin-top: 1rem;
+    max-width: 50ch;
+    opacity: 0.8;
+  }
+
+  .contact-form {
+    margin-top: 2.5rem;
+    background: var(--ivory);
+    border: 1px solid rgba(26, 68, 50, 0.15);
+    border-radius: 4px;
+    padding: 1.5rem;
+  }
+
+  /* ---------- Footer ---------- */
+  footer {
+    padding: 2.5rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+    opacity: 0.65;
+  }
+
+  footer .wordmark { font-size: 1.05rem; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 640px) {
+    header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+    nav a { margin-left: 0; margin-right: 1.5rem; }
+    .service-list { grid-template-columns: 1fr; }
+    .service:nth-child(odd) { border-right: none; padding-right: 0; }
+    .service:nth-child(even) { padding-left: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .btn { transition: none; }
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--teal);
+    outline-offset: 2px;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="wordmark" href="#top">Good Land</a>
+  <nav>
+    <a href="#vision">Vision</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="top">
+  <h1>Unleashing North Africa's potential.</h1>
+  <p>We support small businesses across North Africa with the systems and training to grow strong from the inside, and we carry their voices and their products to the world beyond it.</p>
+  <div class="hero-actions">
+    <a class="btn btn-primary" href="#contact">Get in touch</a>
+    <a class="btn btn-ghost" href="#services">See what we do</a>
+  </div>
+</section>
+
+<div class="horizon">
+  <svg viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stylized coastline with a palm tree, mountains, and the sun over the sea">
+    <!-- sun -->
+    <circle cx="560" cy="95" r="52" fill="#D3A255" opacity="0.9"/>
+    <!-- mountains -->
+    <path d="M300 170 L430 60 L500 130 L560 75 L660 170 Z" fill="#1A4432"/>
+    <path d="M420 170 L520 95 L600 170 Z" fill="#1A4432" opacity="0.85"/>
+    <!-- sea -->
+    <path d="M0 178 C 120 168, 180 188, 300 178 S 480 168, 600 178 S 780 188, 900 176 L900 220 L0 220 Z" fill="#287284"/>
+    <path d="M0 190 C 140 182, 220 198, 360 190 S 560 180, 700 190 S 820 198, 900 188" stroke="#FCF9F3" stroke-opacity="0.35" stroke-width="2" fill="none"/>
+    <!-- palm tree -->
+    <g transform="translate(120,0)">
+      <path d="M100 178 C 96 140, 100 105, 108 78" stroke="#1A4432" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M108 78 C 70 60, 40 65, 15 90" stroke="#1A4432" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M108 78 C 75 90, 55 105, 45 130" stroke="#1A4432" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M108 78 C 130 58, 160 55, 190 68" stroke="#1A4432" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M108 78 C 140 82, 165 95, 180 118" stroke="#1A4432" stroke-width="6" fill="none" stroke-linecap="round"/>
+      <path d="M108 78 C 105 55, 112 35, 128 18" stroke="#1A4432" stroke-width="6" fill="none" stroke-linecap="round"/>
+    </g>
+  </svg>
+</div>
+
+<section class="vision" id="vision">
+  <div class="vision-inner">
+    <p class="eyebrow">Why we exist</p>
+    <p class="vision-line"><strong>Unleash</strong> what's already here — the skill, the craft, the ambition in North Africa's small businesses.</p>
+    <p class="vision-line"><strong>Amplify</strong> their voices and their products, carrying them to buyers and partners around the world.</p>
+    <p class="vision-line"><strong>Support</strong> the day-to-day work of building something durable — the systems, the training, and the habits that let a good business become a great one.</p>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>Practical help, built for how you actually run your business.</h2>
+    <p>Good Land works directly with owners and teams — hands-on, not theoretical — to put real structure behind real growth.</p>
+    <div class="service-list">
+      <div class="service">
+        <h3>EOS Implementation</h3>
+        <p>We help leadership teams adopt the Entrepreneurial Operating System — clear priorities, healthy meetings, and accountability that actually holds.</p>
+      </div>
+      <div class="service">
+        <h3>Odoo Implementation &amp; Training</h3>
+        <p>From first setup to ongoing support, we build and train your team on Odoo — inventory, manufacturing, accounting, HR — so it fits how you work.</p>
+      </div>
+      <div class="service">
+        <h3>Business English Coaching</h3>
+        <p>Practical, professional English for the calls, emails, and negotiations that connect you to international clients and partners.</p>
+      </div>
+      <div class="service">
+        <h3>Organizational Health &amp; Training</h3>
+        <p>Tools and coaching to build a healthier, more aligned team — so growth doesn't come at the cost of culture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's talk.</h2>
+    <p>Tell us a bit about your business and what you're working on — we'll get back to you personally.</p>
+    <div class="contact-form">
+      <div style="width:100%;height:500px;" data-fillout-id="f59SikdgGQus" data-fillout-embed-type="standard" data-fillout-inherit-parameters data-fillout-dynamic-resize></div>
+      <script src="https://server.fillout.com/embed/v1/"></script>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="wordmark">Good Land</span>
+  <span>itsagoodland.com — © 2026 Good Land LLC</span>
+</footer>
+
+</body>
+</html>
